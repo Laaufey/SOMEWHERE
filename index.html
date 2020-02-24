@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somewhere</title>
     <link rel="stylesheet" href="style/style.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Raleway&display=swap" rel="stylesheet">
     <!--Title icon-->
     <link rel="shortcut icon" href="somewhere-icon.png" type="image/x-icon">
     <!--SoMe Icon Library-->
@@ -17,33 +19,36 @@
 
     <header>
 
-        <nav class="top-nav">
-           <div class="logo">
-            <img id="logo" src="assets/logo/logolight-01.png" height="200">
-        </div>
-           <div>
-            <ul>
-                <li id="home"><a href="#">HOME</a></li>
-                <li id="destinations"><a href="#">destinations</a></li>
-                <li id="courses"><a href="#">courses</a></li>
-                <li id="activities"><a href="#">activities</a></li>
-                <li id="apply"><a href="#">apply</a></li>
-            </ul>
+        <nav class="top-nav-container">
+            <div id="logo">
+                <img id="logo" src="assets/logo/logolight-01.png">
+            </div>
+            <div class="top-ul">
+                <ul class="top-nav-list">
+                    <li id="home"><a href="#">HOME</a></li>
+                    <li id="destinations"><a href="#">destinations</a></li>
+                    <li id="courses"><a href="#">courses</a></li>
+                    <li id="activities"><a href="#">activities</a></li>
+                    <li id="apply"><a href="#">apply</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <!--Placed video in main-->
     <main>
-        <div class="hero-video">
+        <div class="hero-video-container">
+           <div class="hero-video-video">
             <video autoplay muted loop id="myVideo">
                 <source src="assets/video.mp4" type="video/mp4">
             </video>
-            <div class="video-text">
+            </div>
+            <div class="hero-video-text">
                 <h3>Imagine finding yourself...</h3>
             </div>
 
         </div>
+
     </main>
 
     <section>
@@ -117,9 +122,7 @@
     </footer>
 
     <script src="script/js.js"></script>
-</body>
-
-</html>
+</body></html>
 
 <!--
 Video needs to be responsive - so when you scale the browser it doesn't get smaller (imo)

@@ -1,70 +1,165 @@
 * {
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color: black;
+    font-family: var(--main-font);
+    font-size: 18px;
 }
 
 :root {
-  --sun-color: #E5D31C;
-  --link-color: #6699CC;
-  --link-hover-color: #333366;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+    --sun-color: #E5D31C;
+    --link-color: #511CE6;
+    --link-hover-color: #290099;
+    --main-text-color: #FFFFFF;
+    --yellow-color: #FFEE38;
+    --dark-text: #14004D;
+    --color-5: #CCBF2D;
 
-  --primary-font: sans-serif;
-  --secondary-font: serif;
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #FFF;
+    --main-font: 'Raleway', sans-serif;
+    --title-font: 'Lexend Deca', sans-serif;
 
-  --white-space: 1rem;
+    --white-space: 1rem;
 }
 
 header {
-   display: -webkit-box; /* Don't worry about these, it's an automatic extension (it places the attribute for other browsers, but if you modify the one I wrote, you have to delete the ones that get added) */
-   display: -ms-flexbox;
-   display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row;
-    flex-flow: row;
+  display: block;
+    position: absolute;
 }
 
 #logo {
+    padding-left: 1rem;
+    max-height: 30vh;
+    margin-top: -5px;
+
+}
+/*NAVIGATION*/
+.top-nav-container {
+    z-index: 1;
+    padding-right: 1rem;
+    background-color: transparent;
+    font-family: var(--title-font);
+    max-height: auto;
+    width: 100vw;
+     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+.top-nav-container:hover {
+    width: 100vw;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+
+
+}
+.top-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-flow: row wrap;
+   flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style-type: none;
     padding: 1rem;
-    max-height: 10rem;
+
+    -webkit-box-align: stretch;
+
+    -ms-flex-align: stretch;
+
+    align-items: stretch;
+}
+
+.top-nav-list a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
 
 }
 
-.hero-video {
+.top-nav-list li {
+    padding: 1em;
+    place-self: flex-end;
+    color: #FFFFFF;
+}
+.top-nav-list li:hover {
+    padding: 1em;
+    place-self: center;
+    color: #FFFFFF;
+    background-color: var(--dark-text);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+
+
+.hero-video-container {
+     z-index: -1;
+    position: relative;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.hero-video-video {
+     z-index: -1;
+    width: 100vw;
+    height: 100vh;
 }
 
-.hero-video video {
+.hero-video-video video {
     z-index: -1;
     position: absolute;
     width: auto;
     height: auto;
-    max-width: 100%;
-    max-height: 100%;
-top: 0;
-
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
+.hero-video-text h3 {
+    color: var(--main-text-color);
+    padding: 2rem;
+    font-size: 3rem;
+    text-align: right;
+}
+
+.hero-video-text {
+-ms-flex-item-align: center;
+align-self: center;
+}
+
 
 h1 {
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
-    color: white;
 
 }
 
 h2 {
-    color: white;
     text-transform: uppercase;
     text-align: center;
 
@@ -72,49 +167,6 @@ h2 {
 
 h3 {
     position: absolute;
-}
-
-
-/*NAVIGATION*/
-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
-
-}
-
-.top-nav div {
-    place-self: center;
-}
-
-nav:hover {}
-
-ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    list-style-type: none;
-    padding: 1.5rem;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-family: sans-serif;
 }
 
 section {
@@ -162,9 +214,11 @@ section {
     height: 17rem;
     background-image: url(srilanka.jpg)
 }
-footer{
-        background-color: dimgray;
+
+footer {
+    background-color: dimgray;
 }
+
 .footer {
     padding: 10px;
 
@@ -218,4 +272,3 @@ footer{
 
 }
  */
-
