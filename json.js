@@ -28,3 +28,25 @@ function showData(singleRowData) {
     //document.querySelector(`#${singleRowData.price}`).appendChild(clone);
     document.querySelector("main").appendChild(clone);
 }
+ // NAVIGATION FIX//
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+/*USER IS ON CURRENT SECTION SELECTION*/
+
+$(document).ready(function(){
+
+ $('ul li a').click(function(){
+  $('li a').removeClass("active");
+    $(this).addClass("active");
+
+ });
+
+});
+
+

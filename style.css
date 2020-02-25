@@ -34,9 +34,21 @@ h3 {
 
 /*NAVIGATION*/
 nav {
-    position: sticky;
+
+position:fixed;
     top: 0;
+ margin-left:30%;
 }
+
+/*NAV bar scroll*/
+
+.navbar-fixed-top.scrolled {
+  background-color: black !important;
+  transition: background-color 300ms linear;
+  margin-left:15%;
+}
+
+
 
 nav:hover {}
 
@@ -56,7 +68,20 @@ nav a {
     text-transform: uppercase;
     color: white;
     font-family: sans-serif;
+
 }
+
+/*USER IS ON CURRENT SECTION SELECTION*/
+nav a.visited{
+    color:aqua;
+    font-weight:bolder;
+}
+
+ul li a {color:greenyellow;}
+
+.active{background-color: azure;}
+
+.navbar-fixed-top{ transition:background-color 200ms linear; }
 
 section {
     display: grid;
