@@ -17,18 +17,28 @@ function handleData(data) {
     console.log(myData);
     myData.forEach(function(oneCat){
 
+        const section = document.createElement("section");
+
+
+        const h2 = document.createElement("h2");
+        h2.textContent = oneCat.gsx$category.$t;
+        section.appendChild(h2);
+
+        const div = document.createElement('div');
+        div.id = oneCat.gsx$category.$t;
+        div.classList.add("grid-display");
+        section.appendChild(div);
+
+        document.querySelector(".test").appendChild(section);
+
         const a = document.createElement("a");
         a.setAttribute("href", `#${oneCat.gsx$category.$t}`);
         document.querySelector(".top-ul>ul>li").appendChild(a);
         a.textContent=oneCat.gsx$category.$t;
 
-        const section = document.createElement("section");
-        section.id = oneCat.gsx$category.$t;
-        const h2 = document.createElement("h2");
-        h2.textContent = oneCat.gsx$category.$t;
-        section.appendChild(h2);
 
-        document.querySelector(".test").appendChild(section);
+
+
     });
     getProducts()
     //showData();
@@ -54,10 +64,15 @@ function showData(data) {
         const template = document.querySelector("#destinationTemplate").content;
         const clone = template.cloneNode(true);
         clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;
+        clone.querySelector(".image").setAttribute('src', 'assets/' + singleRowData.gsx$imgpath.$t + '.jpg');
+
         console.log(`#${singleRowData.gsx$category.$t}`);
         document.querySelector(`#${singleRowData.gsx$category.$t}`).appendChild(clone);
      });
 }
+//Inserting img
+
+
 
 //function addInformation(singleRowData){
 //    const template = document.querySelector("#destinationTemplate").content;
