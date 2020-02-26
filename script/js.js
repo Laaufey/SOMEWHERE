@@ -30,13 +30,11 @@ function handleData(data) {
         section.appendChild(div);
 
         document.querySelector(".test").appendChild(section);
-
+//NAV
         const a = document.createElement("a");
         a.setAttribute("href", `#${oneCat.gsx$category.$t}`);
         document.querySelector(".top-ul>ul>li").appendChild(a);
         a.textContent=oneCat.gsx$category.$t;
-
-
 
 
     });
