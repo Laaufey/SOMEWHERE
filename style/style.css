@@ -28,9 +28,9 @@ header {
 }
 
 #logo {
-    padding-left: 1rem;
-    max-height: 30vh;
-    margin-top: -5px;
+    -ms-flex-item-align: center;
+    align-self: center;
+
 
 }
 /*NAVIGATION*/
