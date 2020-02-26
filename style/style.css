@@ -175,6 +175,13 @@ h3 {
     position: absolute;
 }
 
+h4 {
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
 section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -182,9 +189,15 @@ section {
     margin: 1rem 5rem;
 }
 
+.img img{
+    position:relative;
+}
+/*CATEGORY H3*/
 
 
 
+
+/*
 #country {
     text-align: center;
     display: -webkit-box;
@@ -198,13 +211,15 @@ section {
     margin: 1rem 0;
     height: 25rem;
     background-image: url(krabi.jpg);
-    /*
+
     height: 25rem;
     width: 13rem;
-    background-image: url(krabi.jpg);
+background-image: url(krabi.jpg);}
 */
+
     /*mynd*/
-}
+
+/*
 
 #course {
     text-align: center;
@@ -220,6 +235,7 @@ section {
     height: 17rem;
     background-image: url(srilanka.jpg)
 }
+*/
 
 footer {
     background-color: dimgray;
