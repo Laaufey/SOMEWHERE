@@ -243,25 +243,40 @@ li a:hover {
     cursor: grab;
 }
 
-.findyourself {
+/* .findyourself {
     position: relative;
     width: 100vw;
     height: 100vh;
     color: var(--main-text-color);
+    background-image: url(/assets/img/sri%20lanka.jpg);
+     height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 }
 
+
 .centered {
+    text-transform: uppercase;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+   bottom: 10%;
+    right: 10%;
     font-family: var(--title-font);
     font-size: 3rem;
     font-weight: 600;
+    text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .2);
 }
+
+.empty {
+    width: 100vw;
+    height: 30vh;
+    background-color: white;
+    margin-bottom: -10px;
+
+} */
 
 h1 {
     margin-left: auto;
