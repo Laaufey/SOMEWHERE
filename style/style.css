@@ -188,30 +188,36 @@ li a:hover {
 }
 
 .hero-video-text h3 {
-    color: black;
+    color: white;
     padding: 2rem;
     font-size: 3rem;
     text-align: right;
-    background-color: white;
+    font-weight: 200;
 }
 
 .hero-video-text {
     z-index: 1;
-    background-color: white;
     position: absolute;
     top: 15rem;
-    left: 46rem
+    left: 41.4rem
 }
 
 .apply {
     z-index: 1;
-    background-color: white;
     position: absolute;
     top: 30rem;
-    left: 51rem;
-    width: 6rem;
-    height: 4rem;
-
+    left: 50.3rem;
+    border: 0.2em solid white;
+    border-radius: 0.12em;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: white;
+    margin-top: -2rem;
 }
 
 h1 {
