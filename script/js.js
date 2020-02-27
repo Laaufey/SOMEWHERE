@@ -1,3 +1,15 @@
+/* eslint-env es6 */
+/* eslint-disable */
+
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 60);
+});
+
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
+
 const link = "https://spreadsheets.google.com/feeds/list/1SbC39QCEhGXAiTay_iISo9lOUP8dYm2wRgdqh7HpPag/od6/public/values?alt=json";
 window.addEventListener("DOMContentLoaded", getData);
 
@@ -17,6 +29,12 @@ function handleData(data) {
     console.log(myData);
     myData.forEach(function(oneCat){
 
+        //NAV
+        const a = document.createElement("a");
+        a.setAttribute("href", `#${oneCat.gsx$category.$t}`);
+        document.querySelector(".top-ul>ul>li").appendChild(a);
+        a.textContent=oneCat.gsx$category.$t;
+
         const section = document.createElement("section");
 
 
@@ -31,12 +49,6 @@ function handleData(data) {
 
         document.querySelector(".test").appendChild(section);
 
-        const a = document.createElement("a");
-        a.setAttribute("href", `#${oneCat.gsx$category.$t}`);
-        document.querySelector(".top-ul>ul>li").appendChild(a);
-        a.textContent=oneCat.gsx$category.$t;
-
-
 
 
     });
@@ -44,8 +56,10 @@ function handleData(data) {
     //showData();
 }
 
+
+
 function getProducts(){
-    fetch("https://spreadsheets.google.com/feeds/list/1SbC39QCEhGXAiTay_iISo9lOUP8dYm2wRgdqh7HpPag/od6/public/values?alt=json")
+    fetch(link)
         .then(res => res.json())
         .then(showData);
 //    .then(function (response){
@@ -63,14 +77,48 @@ function showData(data) {
     allData.forEach(function (singleRowData){
         const template = document.querySelector("#destinationTemplate").content;
         const clone = template.cloneNode(true);
-        clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;
-        clone.querySelector(".image").setAttribute('src', 'assets/' + singleRowData.gsx$imgpath.$t + '.jpg');
+        clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;  clone.querySelector(".image").setAttribute('src', 'assets/' + singleRowData.gsx$imgpath.$t + '.jpg');
+
+//        copy.querySelector("button").addEventListener("click", () => {
+//            console.log("click", singleRowData)
+////            fetch(`https://kea-alt-del.dk/t5/api/product?id=${singleRowData.gsx$name.$t}`)
+////              .then(res => res.json())
+////              .then(showDetails);
+//            //modal.querySelector(".modal-image").src = smallImg;
+//          modal.querySelector(".modal-name").textContent = singleRowData.name;
+//          modal.querySelector(".modal-description").textContent = singleRowData.description;
+//          //...
+//          modal.classList.remove("hide");
+//          });
 
         console.log(`#${singleRowData.gsx$category.$t}`);
         document.querySelector(`#${singleRowData.gsx$category.$t}`).appendChild(clone);
      });
 }
-//Inserting img
+
+
+
+
+//nav
+
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+
+
+//function showDetails(data) {
+//  console.log(data)
+//  modal.querySelector(".modal-name").src = smallImg;
+//  modal.querySelector(".modal-name").textContent = data.name;
+//  modal.querySelector(".modal-description").textContent = data.longdescription;
+//  //...
+//  modal.classList.remove("hide");
+//}
 
 
 

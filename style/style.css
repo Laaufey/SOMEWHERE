@@ -85,6 +85,13 @@ header {
 */
 
 }
+/*NAV bar scroll*/
+
+.navbar-fixed-top.scrolled {
+  background-color: black !important;
+  transition: background-color 300ms linear;
+  margin-left:15%;
+}
 
 
 
@@ -100,20 +107,35 @@ header {
     place-self: flex-end;
     color: #FFFFFF;
     cursor: pointer;
+    text-decoration: none !important;
 }
 
 
-.top-ul a {
-    padding: 50px;
+.top-ul a {padding: 1em;
+
 }
 
-.top-nav-list li:hover {
+.top-nav-list li:hover {  -webkit-transition: all .3s ease-in-out;
+ transition: all .3s ease-in-out;}
+
+a:hover {
     padding: 1em;
     place-self: center;
     color: #FFFFFF;
     background-color: var(--dark-text);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+
+}
+
+.top-nav-container:hover {
+    width: 100vw;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+
+
 }
 
 .top {
@@ -199,7 +221,7 @@ h1 {
 h2 {
     text-transform: uppercase;
     text-align: center;
-    margin: 5%;
+    margin: 5%;/*2*/
 
 }
 
@@ -208,7 +230,16 @@ h3 {
 }
 
 h4 {
-    /*
+
+    text-transform: uppercase;
+    position: relative;
+    top: 25%;
+    z-index: 1;
+    color: white;
+    font-weight: 800;
+
+
+/*
     display:flex;
     position: relative;
     flex-direction: column;
@@ -228,10 +259,34 @@ h4 {
 .grid-display img {
     width: 90%;
     height: auto;
+    filter: opacity(0.5);
 }
 
-/*
+.grid-display img:hover {
+    filter: opacity(1);
+}
 
+
+.hide {
+  display: none;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
 
     /*
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -239,10 +294,6 @@ h4 {
     margin: 1rem 5rem;
 */
 
-
-.img img {
-    position: relative;
-}
 
 /*CATEGORY H3*/
 
@@ -459,24 +510,5 @@ footer {
 }
 
 
-/* @media screen and (min-width: 700px) {
 
-    section {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
 
-}
-
-@media screen and (min-width: 900px) {
-    ul {
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-
-    }
-
-    nav a {
-        padding: 0 50px;
-    }
-
-}
- */
