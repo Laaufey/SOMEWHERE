@@ -21,7 +21,9 @@
 
     --white-space: 1rem;
 }
-
+body.modal-open {
+    overflow: hidden;
+}
 header {
     display: block;
     position: absolute;
@@ -379,6 +381,8 @@ h4 {
     margin: 5% 10%;
     padding: 2em;
     align-content: center;
+    overflow: scroll;
+    height: 90%;
 }
 
 .modal-name {
