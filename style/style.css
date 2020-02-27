@@ -119,7 +119,7 @@ header {
 .top-nav-list li:hover {  -webkit-transition: all .3s ease-in-out;
  transition: all .3s ease-in-out;}
 
-a:hover {
+li a:hover {
     padding: 1em;
     place-self: center;
     color: #FFFFFF;
@@ -486,7 +486,6 @@ footer a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-
 }
 
 
