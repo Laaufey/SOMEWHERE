@@ -233,14 +233,14 @@ li a:hover {
     border: 0.3em solid white;
     border-radius: 0.12em;
     top: 30rem;
-    left: 50.3rem;
+    right: 9rem;
     font-weight: 700;
     -webkit-transition: all 0.3s;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     margin-top: -2rem;
     cursor: -webkit-grab;
-    cursor: grab;
+    cursor: pointer;
 }
 
 h1 {
@@ -535,15 +535,15 @@ strong {
     color: var(--dark-text);
 }
 
-#modal-button-course:hover{
+#modal-button-course:hover {
     color: white;
 }
 
-#modal-button-course a{
+#modal-button-course a {
     color: var(--dark-text);
 }
 
-#modal-button-course a:hover{
+#modal-button-course a:hover {
     color: white;
 }
 
@@ -604,52 +604,64 @@ footer a {
         text-align: center;
     }
 
-<<<<<<< HEAD
-    .top-nav-container li a {display: grid;
-    grid-template-columns: 1fr;
-        text-align: center;}}
-
-
-
-
-@media all and (max-width: 730px){
-
-
-     .grid-display{grid-template-columns: 1fr;
-    }
-
-    .top-nav-container {display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    }
-    #logo {
-        padding-left: 0rem;}
-
-    .top-nav-container li a {display: grid;
-    grid-template-columns: 1fr;
-        text-align: center;}
-    #logo {
-    padding-left: 0rem;
-
-}
-    .hero-video-text{
-        top:24rem;
-        right: 23rem;
-    }
-        .hero-video-text h3{
- font-size: 2.6rem;
-    }
-    #apply-button{
-        top: 38rem;
-        font-size: 1.3em;
-    }
-}
-
-=======
-    .top-nav-container li a {
+    <<<<<<< HEAD .top-nav-container li a {
         display: grid;
         grid-template-columns: 1fr;
         text-align: center;
     }
 }
->>>>>>> modalbtn
+
+
+
+
+@media all and (max-width: 730px) {
+
+
+    .grid-display {
+        grid-template-columns: 1fr;
+    }
+
+    .top-nav-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #logo {
+        padding-left: 0rem;
+    }
+
+    .top-nav-container li a {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #logo {
+        padding-left: 0rem;
+
+    }
+
+    .hero-video-text {
+        top: 24rem;
+        right: 23rem;
+    }
+
+    .hero-video-text h3 {
+        font-size: 2.6rem;
+    }
+
+    #apply-button {
+        top: 38rem;
+        font-size: 1.3em;
+    }
+}
+
+=======.top-nav-container li a {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+}
+
+> > > > > > > modalbtn
