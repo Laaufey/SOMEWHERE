@@ -33,7 +33,7 @@ header {
 #logo {
     padding-left: 1rem;
     max-height: 30vh;
-    margin-top: -5px;
+    margin-top: 5px;
 
 }
 
@@ -105,10 +105,12 @@ header {
 
 .top-nav-list li {
     padding: 1em;
+    margin-top: 1em;
     place-self: flex-end;
     color: #FFFFFF;
     cursor: pointer;
     text-decoration: none !important;
+    list-style-type: none;
 }
 
 
