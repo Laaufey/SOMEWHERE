@@ -289,6 +289,8 @@ h5{
     height: auto;
     -webkit-filter: opacity(1);
     filter: opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .grid-display img:hover {
@@ -296,6 +298,10 @@ h5{
     filter: opacity(.5);
     border: .1em solid;
     border-color: var(--dark-text);
+    -webkit-transition: all .2s ease-in-out;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
 }
 
 .hide {
@@ -393,7 +399,15 @@ background-image: url(krabi.jpg);}
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 2rem;
     margin: 0 5rem;
-    color: dimgray;
+    color: var(--dark-text);
+}
+
+.form h5 {
+    font-weight: 600;
+    border-bottom: 1em solid;
+    border-bottom-color: var(--dark-text);
+    margin-bottom: 1em;
+
 }
 
 
