@@ -604,7 +604,7 @@ footer a {
         text-align: center;
     }
 
-    <<<<<<< HEAD .top-nav-container li a {
+    .top-nav-container li a {
         display: grid;
         grid-template-columns: 1fr;
         text-align: center;
@@ -656,12 +656,3 @@ footer a {
         font-size: 1.3em;
     }
 }
-
-=======.top-nav-container li a {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-}
-}
-
-> > > > > > > modalbtn
