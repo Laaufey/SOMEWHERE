@@ -21,9 +21,11 @@
 
     --white-space: 1rem;
 }
-
+body.modal-open {
+    overflow: hidden;
+}
 header {
-  display: block;
+    display: block;
     position: absolute;
 }
 
@@ -33,6 +35,7 @@ header {
     margin-top: -5px;
 
 }
+
 /*NAVIGATION*/
 .top-nav-container {
     z-index: 1;
@@ -41,7 +44,7 @@ header {
     font-family: var(--title-font);
     max-height: auto;
     width: 100vw;
-     display: -webkit-box;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
@@ -50,10 +53,18 @@ header {
 
 }
 
+.top-nav-container:hover {
+    width: 100vw;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
 
+
+}
 
 .top-nav-list {
-/*
+    /*
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -127,19 +138,18 @@ a:hover {
 
 }
 
-
-
-
-.top {padding:10px;
-      margin: 10px;
-    border: 10px;}
+.top {
+    padding: 10px;
+    margin: 10px;
+    border: 10px;
+}
 
 
 
 
 
 .hero-video-container {
-     z-index: -1;
+    z-index: -1;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -154,8 +164,9 @@ a:hover {
     -ms-flex-align: start;
     align-items: flex-start;
 }
+
 .hero-video-video {
-     z-index: -1;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
 }
@@ -174,7 +185,6 @@ a:hover {
 }
 
 .hero-video-text h3 {
-
     color: black;
     padding: 2rem;
     font-size: 3rem;
@@ -184,12 +194,22 @@ a:hover {
 
 .hero-video-text {
     z-index: 1;
--ms-flex-item-align: right;
-align-self: right;
     background-color: white;
-
+    position: absolute;
+    top: 15rem;
+    left: 46rem
 }
 
+.apply {
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    top: 30rem;
+    left: 51rem;
+    width: 6rem;
+    height: 4rem;
+
+}
 
 h1 {
     margin-left: auto;
@@ -201,7 +221,7 @@ h1 {
 h2 {
     text-transform: uppercase;
     text-align: center;
-    margin:2%;
+    margin: 5%;/*2*/
 
 }
 
@@ -231,8 +251,9 @@ h4 {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0rem;
-    text-align: center;}
+    grid-gap: 2rem;
+    text-align: center;
+}
 
 
 .grid-display img {
@@ -299,7 +320,7 @@ h4 {
 background-image: url(krabi.jpg);}
 */
 
-    /*mynd*/
+/*mynd*/
 
 /*
 
@@ -318,6 +339,139 @@ background-image: url(krabi.jpg);}
     background-image: url(srilanka.jpg)
 }
 */
+
+
+/*APPLICATION*/
+
+
+#box {
+    background: white;
+    background-color: #fefefe;
+    box-shadow: 0.5px 0.5px 10px 0.5px black;
+    margin: 5% 10%;
+}
+
+#form {
+    padding: 1em 0 2rem 0;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 2rem;
+    margin: 0 5rem;
+    color: dimgray;
+}
+
+button {
+    padding: 1rem;
+
+}
+
+#button {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+button {
+    border: 0.3em solid dimgray;
+    border-radius: 0.12em;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: dimgray;
+}
+
+button:hover{
+    color: white;
+    background-color: dimgray;
+}
+
+#box h1 {
+    color: dimgray;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    font-size: 2em
+}
+
+h4 {
+    text-transform: uppercase;
+    color: dimgray;
+    font-size: 1.1em;
+    font-style: bold;
+    padding-bottom: 0.3rem;
+}
+
+#number {
+    width: 40px;
+    color: dimgray;
+    height: 31px
+}
+
+#dateofbirth {
+    color: dimgray;
+    width: 170px;
+}
+
+
+/*MODAL*/
+
+.modal-background {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 5% 10%;
+    padding: 2em;
+    align-content: center;
+    overflow: scroll;
+    height: 90%;
+}
+
+.modal-name {
+    color: dimgray;
+    text-align: center;
+    font-size: 3em;
+}
+
+#modal-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 2rem;
+    margin: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+strong{
+    font-size: 1.1em;
+    color: dimgray;
+}
+
+#img-modal {
+    text-align: center;
+    margin: 0 -2rem;
+    height: 20rem;
+    background-image: url(krabi.jpg);
+}
+.modal-button{
+    text-align: right;
+}
+#modal-button-course{
+    margin:1rem 0;
+}
+
+/*FOOTER*/
 
 footer {
     background-color: dimgray;

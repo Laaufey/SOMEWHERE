@@ -26,12 +26,7 @@
             <div class="top-ul">
                 <ul class="top-nav-list">
                     <li id="home"><a href="/">HOME</a></li>
-<!--
-                    <li><a href="#destinationTemplate">destinations</a></li>
-                    <li ><a href="#courseTemplate">courses</a></li>
-                    <li id="activities"><a href="#activities">activities</a></li>
-                    <li id="apply"><a href="#apply">apply</a></li>
--->
+
                 </ul>
             </div>
         </nav>
@@ -47,8 +42,9 @@
             </div>
             <div class="hero-video-text">
                 <h3>Imagine finding yourself...</h3>
+                <button class="apply">APPLY</button>
             </div>
-
+            <button class="apply">APPLY</button>
         </div>
 
 
@@ -69,65 +65,47 @@
     </template>
 
    </div>
-  <div class="modal-background hide">
-    <div class="modal-content">
-      <h3 class="modal-name">NAME</h3>
-      <img src="" alt="" class="modal-image" />
-      <p class="modal-description">LONG DESCRIPTION</p>
-      <h4 class="modal-price">PRICE</h4>
-    </div>
-  </div>
-<!--
-    <section id="destinations">
-        <h1>Somewhere in...</h1>
-    </section>
-    <section>
-        <div id="country">
-            <h2>Thailand</h2>
+
+    <div id="box">
+       <div><h1>Let's plan your next steps</h1></div>
+        <div id="form">
+            <div class="form">
+                <h4>Where?</h4>
+                <div >
+                    <p><input id="check" type="checkbox"> Bali</p>
+                </div>
+                <div >
+                    <p><input id="check" type="checkbox"> Sri Lanka</p>
+                </div>
+                <div >
+                    <p><input id="check" type="checkbox"> Thailand</p>
+                </div>
+            </div>
+            <div class="form">
+                <h4>What?</h4>
+                <div>
+                    <p><input id="check" type="checkbox"> Photography</p>
+                    <p><input id="check" type="checkbox"> Videography</p>
+                    <p><input id="check" type="checkbox"> Web Design</p>
+                </div>
+            </div>
+            <div class="form">
+                <h4>When?</h4>
+                <label for="dateofbirth">From</label><br>
+                <input type="date" name="dateofbirth" id="dateofbirth"> <br> <br>
+                <label for="dateofbirth">To<br></label>
+                <input type="date" name="dateofbirth" id="dateofbirth">
+            </div>
+            <div class="form">
+                <h4>Who?</h4>
+                <label for="persons">Person/s</label><br>
+                <input type="number" id="number">
+            </div>
+
         </div>
-        <article id="country">
-            <h2>Bali</h2>
-        </article>
-        <article id="country">
-            <h2>Sri Lanka</h2>
-        </article>
-    </section>
 
-    <section id="courses">
-        <h1>What we offer</h1>
-    </section>
-    <section>
-        <article id="course">
-            <h2>Photography</h2>
-        </article>
-        <article id="course">
-            <h2>Videography</h2>
-        </article>
-        <article id="course">
-            <h2>Webdesign</h2>
-        </article>
-    </section>
-
-
-
-    <section class="howItWorks">
-        <article>
-            <h2>Pick a Destination</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </article>
-        <article>
-            <h2>Pick a course</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </article>
-        <article>
-            <h2>Pick a time</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </article>
-    </section>
-    <template>
-        <h1>LIST OF COURSES</h1>
-    </template>
--->
+        <div id="button"><button>Take me there</button></div>
+    </div>
 
     <footer>
         <div class="footer">
@@ -149,6 +127,31 @@
             2020 All rights reserved
         </div>
     </footer>
+    <div class="modal-background hide">
+        <div class="modal-content">
+
+            <h1 class="modal-name">Thailand</h1>
+            <div id="img-modal"><img src="" class="modal-image"></div>
+            <p class="modal-description"><strong>Friendly and food-obsessed, hedonistic and historic, cultured and curious, Thailand tempts visitors with a smile as golden as the country's glittering temples and tropical beaches</strong>
+ <br>
+ <br>
+Beaches and nature
+With a luxuriously long coastline and over 1400 jungle-topped islands anchored in azure waters, Thailand is a tropical getaway fit for everyone. The country's coast is one giant playground, with plenty going on wherever the sand meets the sea. You can snorkel the gentle waters off Ko Lipe, dive with whale sharks around Ko Tao, scale the sea cliffs of Krabi, kiteboard in Hua Hin, party on Ko Phi-Phi and recuperate at a health resort on Ko Samui. Outside the cluttered cities and towns lies Thailand's rural heartland, a mix of rice paddies, tropical forests and villages where life is dominated by the rhythms of the agricultural clock.
+  <br>
+  <br>
+Culture
+Gleaming temples and golden Buddhas frame both the rural and the urban landscape. Ancient banyan trees are ceremoniously wrapped in sacred cloth to honour the resident spirits, fortune-bringing shrines decorate humble homes as well as monumental malls.
+</p>
+<div class="modal-button">
+<button id="modal-button-course">Find courses in Thailand</button></div>
+<!--
+            <h4>Courses available</h4>
+            <div id="modal-courses"><div id="course-modal"><h2>Photography</h2></div><div id="course-modal"><h2>Videography</h2></div><div id="course-modal"><h2>Webdesign</h2></div></div>
+-->
+
+            <h4 class="modal-price"></h4>
+        </div>
+    </div>
     <script src="script/js.js"></script>
 
 </body></html>
