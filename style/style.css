@@ -49,16 +49,11 @@ header {
     justify-content: center;
 
 }
-.top-nav-container:hover {
-    width: 100vw;
-    max-height: auto;
-    background-color: rgba(0, 0, 0, .2);
-    -webkit-transition: background-color .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
 
 
-}
+
 .top-nav-list {
+/*
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -76,7 +71,18 @@ header {
     -ms-flex-align: stretch;
 
     align-items: stretch;
+*/
+
 }
+/*NAV bar scroll*/
+
+.navbar-fixed-top.scrolled {
+  background-color: black !important;
+  transition: background-color 300ms linear;
+  margin-left:15%;
+}
+
+
 
 .top-nav-list a {
     text-decoration: none;
@@ -90,16 +96,43 @@ header {
     place-self: flex-end;
     color: #FFFFFF;
     cursor: pointer;
+    text-decoration: none !important;
 }
-.top-nav-list li:hover {
+
+
+.top-ul a {padding: 1em;
+
+}
+
+.top-nav-list li:hover {  -webkit-transition: all .3s ease-in-out;
+ transition: all .3s ease-in-out;}
+
+a:hover {
     padding: 1em;
     place-self: center;
     color: #FFFFFF;
     background-color: var(--dark-text);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+
 }
 
+.top-nav-container:hover {
+    width: 100vw;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+
+
+}
+
+
+
+
+.top {padding:10px;
+      margin: 10px;
+    border: 10px;}
 
 
 
@@ -168,6 +201,7 @@ h1 {
 h2 {
     text-transform: uppercase;
     text-align: center;
+    margin:2%;
 
 }
 
@@ -175,16 +209,77 @@ h3 {
     position: absolute;
 }
 
-section {
+h4 {
+
+    text-transform: uppercase;
+    position: relative;
+    top: 25%;
+    z-index: 1;
+    color: white;
+    font-weight: 800;
+
+
+/*
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    text-transform: uppercase;
+*/
+}
+
+.grid-display {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 2rem;
-    margin: 1rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0rem;
+    text-align: center;}
+
+
+.grid-display img {
+    width: 90%;
+    height: auto;
+    filter: opacity(0.5);
+}
+
+.grid-display img:hover {
+    filter: opacity(1);
 }
 
 
+.hide {
+  display: none;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+    /*
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    margin: 1rem 5rem;
+*/
 
 
+/*CATEGORY H3*/
+
+
+
+
+/*
 #country {
     text-align: center;
     display: -webkit-box;
@@ -198,13 +293,15 @@ section {
     margin: 1rem 0;
     height: 25rem;
     background-image: url(krabi.jpg);
-    /*
+
     height: 25rem;
     width: 13rem;
-    background-image: url(krabi.jpg);
+background-image: url(krabi.jpg);}
 */
+
     /*mynd*/
-}
+
+/*
 
 #course {
     text-align: center;
@@ -220,6 +317,7 @@ section {
     height: 17rem;
     background-image: url(srilanka.jpg)
 }
+*/
 
 footer {
     background-color: dimgray;
@@ -257,24 +355,6 @@ footer {
     color: white;
 }
 
-/* @media screen and (min-width: 700px) {
 
-    section {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
 
-}
 
-@media screen and (min-width: 900px) {
-    ul {
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-
-    }
-
-    nav a {
-        padding: 0 50px;
-    }
-
-}
- */

@@ -25,11 +25,13 @@
             </div>
             <div class="top-ul">
                 <ul class="top-nav-list">
-                    <li id="home"><a href="#">HOME</a></li>
-                    <li><a href="#destinations">destinations</a></li>
-                    <li ><a href="#courses">courses</a></li>
+                    <li id="home"><a href="/">HOME</a></li>
+<!--
+                    <li><a href="#destinationTemplate">destinations</a></li>
+                    <li ><a href="#courseTemplate">courses</a></li>
                     <li id="activities"><a href="#activities">activities</a></li>
                     <li id="apply"><a href="#apply">apply</a></li>
+-->
                 </ul>
             </div>
         </nav>
@@ -49,8 +51,33 @@
 
         </div>
 
+
     </main>
 
+
+    <div class="test">
+    <!--TEMPLATE CREATION        -->
+
+    <template class="template" id="destinationTemplate">
+        <article class="destination" id="destination">
+
+                 <h4>Location</h4>
+                <div class="img">
+                    <img class="image" src="assets/1.jpg"  />
+                </div>
+        </article>
+    </template>
+
+   </div>
+  <div class="modal-background hide">
+    <div class="modal-content">
+      <h3 class="modal-name">NAME</h3>
+      <img src="" alt="" class="modal-image" />
+      <p class="modal-description">LONG DESCRIPTION</p>
+      <h4 class="modal-price">PRICE</h4>
+    </div>
+  </div>
+<!--
     <section id="destinations">
         <h1>Somewhere in...</h1>
     </section>
@@ -100,6 +127,7 @@
     <template>
         <h1>LIST OF COURSES</h1>
     </template>
+-->
 
     <footer>
         <div class="footer">
@@ -108,13 +136,14 @@
             <a href="#" class="fa fa-linkedin"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="..">Privacy</a>
-            <!--
+
        <h4>Contact</h4>
         <h4>Privacy</h4>
--->
+
 
         </div>
-        <div class="footer-logo"><img src="somewherelogo.png" height="100"></div>
+        <div class="footer-logo">
+            <img src="assets/logo/logolight-01.png" height="100"></div>
 
         <div class="copyright">
             2020 All rights reserved
