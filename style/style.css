@@ -205,12 +205,19 @@ li a:hover {
 
 .apply {
     z-index: 1;
-    background-color: white;
     position: absolute;
     top: 30rem;
     left: 51rem;
-    width: 6rem;
-    height: 4rem;
+    border: 0.2em solid white;
+    border-radius: 0.12em;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.em;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: white;
 
 }
 
@@ -361,17 +368,13 @@ background-image: url(krabi.jpg);}
     color: dimgray;
 }
 
-button {
-    padding: 1rem;
-
-}
 
 #button {
     text-align: center;
     padding-bottom: 2rem;
 }
 
-button {
+#takemesomewhere {
     border: 0.3em solid dimgray;
     border-radius: 0.12em;
     transition: all 0.2s;
@@ -380,9 +383,10 @@ button {
     text-transform: uppercase;
     font-size: 0.9em;
     color: dimgray;
+    padding: 1rem;
 }
 
-button:hover{
+#takemesomewhere:hover{
     color: white;
     background-color: dimgray;
 }
