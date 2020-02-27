@@ -107,7 +107,6 @@ function showData(data) {
 
 
 
-
 //nav
 
 
