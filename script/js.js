@@ -7,7 +7,7 @@ window.addEventListener("hashchange", function () {
 
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
-  modal.classList.add("hide");
+    modal.classList.add("hide");
 });
 
 const link = "https://spreadsheets.google.com/feeds/list/1SbC39QCEhGXAiTay_iISo9lOUP8dYm2wRgdqh7HpPag/od6/public/values?alt=json";
@@ -27,13 +27,13 @@ function handleData(data) {
     const myData = data.feed.entry;
     console.log("myData - console");
     console.log(myData);
-    myData.forEach(function(oneCat){
+    myData.forEach(function (oneCat) {
 
         //NAV
         const a = document.createElement("a");
         a.setAttribute("href", `#${oneCat.gsx$category.$t}`);
         document.querySelector(".top-ul>ul>li").appendChild(a);
-        a.textContent=oneCat.gsx$category.$t;
+        a.textContent = oneCat.gsx$category.$t;
 
         const section = document.createElement("section");
 
@@ -58,42 +58,43 @@ function handleData(data) {
 
 
 
-function getProducts(){
+function getProducts() {
     fetch(link)
         .then(res => res.json())
         .then(showData);
-//    .then(function (response){
-//        return response.json();
-//    })
-//    .then(function (data){
-//        showData(data);
-//    })
+    //    .then(function (response){
+    //        return response.json();
+    //    })
+    //    .then(function (data){
+    //        showData(data);
+    //    })
 }
 
 function showData(data) {
     const allData = data.feed.entry;
     console.log("allData - console");
     console.log(allData);
-    allData.forEach(function (singleRowData){
+    allData.forEach(function (singleRowData) {
         const template = document.querySelector("#destinationTemplate").content;
         const clone = template.cloneNode(true);
-        clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;  clone.querySelector(".image").setAttribute('src', 'assets/' + singleRowData.gsx$imgpath.$t + '.jpg');
+        clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;
+        clone.querySelector(".image").setAttribute('src', 'assets/img/' + singleRowData.gsx$imgpath.$t + '.jpg');
 
-//        copy.querySelector("button").addEventListener("click", () => {
-//            console.log("click", singleRowData)
-////            fetch(`https://kea-alt-del.dk/t5/api/product?id=${singleRowData.gsx$name.$t}`)
-////              .then(res => res.json())
-////              .then(showDetails);
-//            //modal.querySelector(".modal-image").src = smallImg;
-//          modal.querySelector(".modal-name").textContent = singleRowData.name;
-//          modal.querySelector(".modal-description").textContent = singleRowData.description;
-//          //...
-//          modal.classList.remove("hide");
-//          });
+        //        copy.querySelector("button").addEventListener("click", () => {
+        //            console.log("click", singleRowData)
+        ////            fetch(`https://kea-alt-del.dk/t5/api/product?id=${singleRowData.gsx$name.$t}`)
+        ////              .then(res => res.json())
+        ////              .then(showDetails);
+        //            //modal.querySelector(".modal-image").src = smallImg;
+        //          modal.querySelector(".modal-name").textContent = singleRowData.name;
+        //          modal.querySelector(".modal-description").textContent = singleRowData.description;
+        //          //...
+        //          modal.classList.remove("hide");
+        //          });
 
         console.log(`#${singleRowData.gsx$category.$t}`);
         document.querySelector(`#${singleRowData.gsx$category.$t}`).appendChild(clone);
-     });
+    });
 }
 
 
@@ -103,10 +104,10 @@ function showData(data) {
 
 
 $(function () {
-  $(document).scroll(function () {
-    var $nav = $(".navbar-fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-  });
+    $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
 });
 
 
@@ -133,5 +134,3 @@ $(function () {
 //    //document.querySelector(`#${singleRowData.price}`).appendChild(clone);
 //    document.querySelector("main").appendChild(clone);
 //}
-
-
