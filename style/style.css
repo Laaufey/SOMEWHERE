@@ -147,10 +147,6 @@ li a:hover {
     border: 10px;
 }
 
-
-
-
-
 .hero-video-container {
     z-index: -1;
     position: relative;
@@ -202,22 +198,51 @@ li a:hover {
     left: 41.4rem
 }
 
-.apply {
-    z-index: 1;
-    position: absolute;
-    top: 30rem;
-    left: 50.3rem;
-    border: 0.2em solid white;
+/* BUTTONS */
+
+button{
     border-radius: 0.12em;
     transition: all 0.2s;
     cursor: pointer;
+    padding: 1rem;
+}
+
+#button-box {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#takemesomewhere {
+    border: 0.3em solid dimgray;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: dimgray;
+    padding: 1rem;
+}
+
+#takemesomewhere:hover{
+    color: white;
+    background-color: dimgray;
+}
+
+#apply-button{
+    z-index: 1;
+    border: 0.2em solid white;
+    top: 29rem;
+    left: 50.3rem;
+    position: absolute;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.7em;
     padding: 0.5rem;
     background-color: transparent;
     color: white;
-    margin-top: -2rem;
+}
+
+#apply-button:hover{
+    color: transparent;
+    background-color: white;
 }
 
 h1 {
@@ -367,31 +392,7 @@ background-image: url(krabi.jpg);}
     color: dimgray;
 }
 
-button {
-    padding: 1rem;
 
-}
-
-#button {
-    text-align: center;
-    padding-bottom: 2rem;
-}
-
-button {
-    border: 0.3em solid dimgray;
-    border-radius: 0.12em;
-    transition: all 0.2s;
-    cursor: pointer;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    color: dimgray;
-}
-
-button:hover{
-    color: white;
-    background-color: dimgray;
-}
 
 #box h1 {
     color: dimgray;
