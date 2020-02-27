@@ -532,6 +532,19 @@ strong {
 
 #modal-button-course {
     margin: 1rem 0;
+    color: var(--dark-text);
+}
+
+#modal-button-course:hover{
+    color: white;
+}
+
+#modal-button-course a{
+    color: var(--dark-text);
+}
+
+#modal-button-course a:hover{
+    color: white;
 }
 
 
