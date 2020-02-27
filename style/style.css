@@ -328,7 +328,7 @@ h5{
 
 
 
-/*
+
 #country {
     text-align: center;
     display: -webkit-box;
@@ -341,16 +341,10 @@ h5{
     padding: 1rem 2rem;
     margin: 1rem 0;
     height: 25rem;
-    background-image: url(krabi.jpg);
 
     height: 25rem;
     width: 13rem;
-background-image: url(krabi.jpg);}
-*/
-
-/*mynd*/
-
-/*
+}
 
 #course {
     text-align: center;
@@ -364,9 +358,8 @@ background-image: url(krabi.jpg);}
     padding: 1rem 2rem;
     margin: 1rem 0;
     height: 17rem;
-    background-image: url(srilanka.jpg)
 }
-*/
+
 
 
 /*APPLICATION*/
@@ -494,7 +487,6 @@ strong{
     text-align: center;
     margin: 0 -2rem;
     height: 20rem;
-    background-image: url(krabi.jpg);
 }
 .modal-button{
     text-align: right;

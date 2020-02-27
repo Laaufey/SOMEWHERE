@@ -13,6 +13,7 @@ modal.addEventListener("click", () => {
 const link = "https://spreadsheets.google.com/feeds/list/1SbC39QCEhGXAiTay_iISo9lOUP8dYm2wRgdqh7HpPag/od6/public/values?alt=json";
 window.addEventListener("DOMContentLoaded", getData);
 
+
 function getData() {
     fetch("https://spreadsheets.google.com/feeds/list/1fQjUIAIEB98DGih-JanUjNW_tEcJaNygxNDd4qtAElU/od6/public/values?alt=json")
         .then(res => res.json())
@@ -78,19 +79,26 @@ function showData(data) {
         const template = document.querySelector("#destinationTemplate").content;
         const clone = template.cloneNode(true);
         clone.querySelector("h4").textContent = singleRowData.gsx$name.$t;
-        clone.querySelector(".image").setAttribute('src', 'assets/img/' + singleRowData.gsx$imgpath.$t + '.jpg');
+        cImg = ('assets/img/' + singleRowData.gsx$imgpath.$t + '.jpg');
+        console.log(cImg);
+        clone.querySelector(".image").setAttribute('src', cImg);
 
-        //        copy.querySelector("button").addEventListener("click", () => {
-        //            console.log("click", singleRowData)
-        ////            fetch(`https://kea-alt-del.dk/t5/api/product?id=${singleRowData.gsx$name.$t}`)
-        ////              .then(res => res.json())
-        ////              .then(showDetails);
-        //            //modal.querySelector(".modal-image").src = smallImg;
-        //          modal.querySelector(".modal-name").textContent = singleRowData.name;
-        //          modal.querySelector(".modal-description").textContent = singleRowData.description;
-        //          //...
-        //          modal.classList.remove("hide");
-        //          });
+        clone.querySelector(".image").addEventListener("click", () => {
+                console.log("click", singleRowData)
+                fetch(link)
+                    .then(res => res.json())
+                    .then(function (data){
+
+                              modal.querySelector(".modal-image").src = ('assets/img/' + singleRowData.gsx$imgpath.$t + '.jpg');
+                              modal.querySelector(".modal-name").textContent = singleRowData.gsx$name.$t;
+                              modal.querySelector(".modal-description").textContent = singleRowData.gsx$shortdescription.$t;
+                              modal.querySelector(".modal-button span").textContent = singleRowData.gsx$name.$t;
+                              modal.querySelector(".modal-price span").textContent = singleRowData.gsx$price.$t;
+
+                          modal.classList.remove("hide");
+                });
+
+              });
 
         console.log(`#${singleRowData.gsx$category.$t}`);
         document.querySelector(`#${singleRowData.gsx$category.$t}`).appendChild(clone);
@@ -110,27 +118,3 @@ $(function () {
     });
 });
 
-
-
-//function showDetails(data) {
-//  console.log(data)
-//  modal.querySelector(".modal-name").src = smallImg;
-//  modal.querySelector(".modal-name").textContent = data.name;
-//  modal.querySelector(".modal-description").textContent = data.longdescription;
-//  //...
-//  modal.classList.remove("hide");
-//}
-
-
-
-//function addInformation(singleRowData){
-//    const template = document.querySelector("#destinationTemplate").content;
-//    const clone = template.cloneNode(true); clone.querySelector("h3").textContent = singleRowData.gsx$name.$t;
-//
-////    const template0 = document.querySelector("#courseTemplate").content;
-////    const clone0 = template0.cloneNode(true); clone0.querySelector("h3").textContent = singleRowData.gsx$name.$t;
-////    //clone.querySelector("h4").textContent = singleRowData.gsx$price.$t;
-//    //alert ("hey")
-//    //document.querySelector(`#${singleRowData.price}`).appendChild(clone);
-//    document.querySelector("main").appendChild(clone);
-//}
